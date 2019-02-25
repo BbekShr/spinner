@@ -18,36 +18,52 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TiW-Q6-eRu">
-                                <rect key="frame" x="170.5" y="318" width="34" height="31"/>
-                                <state key="normal" title="Start"/>
-                                <connections>
-                                    <action selector="startButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ykc-ot-GqG"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8ID-WV-9qJ">
-                                <rect key="frame" x="172" y="393" width="32" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="80g-5c-w2l"/>
-                                </constraints>
-                                <state key="normal" title="Stop"/>
-                                <connections>
-                                    <action selector="stopButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uDQ-Gv-pcw"/>
-                                </connections>
-                            </button>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6hy-AT-kXc">
+                                <rect key="frame" x="0.0" y="39" width="375" height="44"/>
+                                <items>
+                                    <navigationItem title="Title" id="uM9-K1-cil">
+                                        <barButtonItem key="leftBarButtonItem" style="plain" id="guh-iV-hOI">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="TiW-Q6-eRu">
+                                                <rect key="frame" x="16" y="7" width="34" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Start"/>
+                                                <connections>
+                                                    <action selector="startButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ykc-ot-GqG"/>
+                                                </connections>
+                                            </button>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" style="plain" id="HSH-dp-4M8">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="8ID-WV-9qJ">
+                                                <rect key="frame" x="327" y="7" width="32" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Stop"/>
+                                                <connections>
+                                                    <action selector="stopButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uDQ-Gv-pcw"/>
+                                                </connections>
+                                            </button>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="USZ-qM-bkx">
+                                <rect key="frame" x="178" y="323" width="19" height="21"/>
+                            </activityIndicatorView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="TiW-Q6-eRu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1TQ-nr-afe"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="8ID-WV-9qJ" secondAttribute="bottom" constant="244" id="927-4E-GFo"/>
-                            <constraint firstItem="8ID-WV-9qJ" firstAttribute="firstBaseline" secondItem="TiW-Q6-eRu" secondAttribute="baseline" constant="20" symbolType="layoutAnchor" id="aW0-S3-H7d"/>
-                            <constraint firstItem="8ID-WV-9qJ" firstAttribute="top" secondItem="TiW-Q6-eRu" secondAttribute="bottom" constant="44" id="eq2-Ca-ndf"/>
-                            <constraint firstItem="TiW-Q6-eRu" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="j7j-Ld-kza"/>
-                            <constraint firstItem="8ID-WV-9qJ" firstAttribute="centerX" secondItem="TiW-Q6-eRu" secondAttribute="centerX" id="nGs-XC-o4H"/>
-                            <constraint firstItem="8ID-WV-9qJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="172" id="vg6-O5-qLE"/>
+                            <constraint firstItem="USZ-qM-bkx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="178" id="3EC-fW-wOM"/>
+                            <constraint firstItem="6hy-AT-kXc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="19" id="GMK-db-a5c"/>
+                            <constraint firstItem="6hy-AT-kXc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="XRy-MC-5nc"/>
+                            <constraint firstItem="6hy-AT-kXc" firstAttribute="centerX" secondItem="USZ-qM-bkx" secondAttribute="centerX" id="Ydu-ul-cHw"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="USZ-qM-bkx" secondAttribute="bottom" constant="323" id="jf8-pe-YTP"/>
+                            <constraint firstAttribute="trailing" secondItem="6hy-AT-kXc" secondAttribute="trailing" id="kfK-2i-nRi"/>
+                            <constraint firstItem="USZ-qM-bkx" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="vBV-Wy-2qM"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="activityView" destination="USZ-qM-bkx" id="5Lw-ul-j9Z"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
