@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6hy-AT-kXc">
-                                <rect key="frame" x="0.0" y="39" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="39" width="360" height="44"/>
                                 <items>
                                     <navigationItem title="Title" id="uM9-K1-cil">
                                         <barButtonItem key="leftBarButtonItem" style="plain" id="guh-iV-hOI">
@@ -34,7 +34,7 @@
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" style="plain" id="HSH-dp-4M8">
                                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="8ID-WV-9qJ">
-                                                <rect key="frame" x="327" y="7" width="32" height="30"/>
+                                                <rect key="frame" x="312" y="7" width="32" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" title="Stop"/>
                                                 <connections>
@@ -45,24 +45,35 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="USZ-qM-bkx">
-                                <rect key="frame" x="178" y="323" width="19" height="21"/>
-                            </activityIndicatorView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="67I-o2-S4c">
+                                <rect key="frame" x="137.5" y="283.5" width="100" height="100"/>
+                                <subviews>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="USZ-qM-bkx">
+                                        <rect key="frame" x="39.5" y="39.5" width="20" height="20"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="tintColor" red="0.76143223049999997" green="0.12505456810000001" blue="0.1998609006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="Mf6-oy-ePD"/>
+                                    <constraint firstAttribute="width" constant="100" id="gGx-Ku-1gU"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="USZ-qM-bkx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="178" id="3EC-fW-wOM"/>
-                            <constraint firstItem="6hy-AT-kXc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="19" id="GMK-db-a5c"/>
-                            <constraint firstItem="6hy-AT-kXc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="XRy-MC-5nc"/>
-                            <constraint firstItem="6hy-AT-kXc" firstAttribute="centerX" secondItem="USZ-qM-bkx" secondAttribute="centerX" id="Ydu-ul-cHw"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="USZ-qM-bkx" secondAttribute="bottom" constant="323" id="jf8-pe-YTP"/>
-                            <constraint firstAttribute="trailing" secondItem="6hy-AT-kXc" secondAttribute="trailing" id="kfK-2i-nRi"/>
-                            <constraint firstItem="USZ-qM-bkx" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="vBV-Wy-2qM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6hy-AT-kXc" secondAttribute="trailing" constant="15" id="6e6-dY-GEB"/>
+                            <constraint firstItem="6hy-AT-kXc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="GIR-ZS-AEY"/>
+                            <constraint firstItem="67I-o2-S4c" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Kog-UB-gKs"/>
+                            <constraint firstItem="67I-o2-S4c" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="i2s-VE-O2Q"/>
+                            <constraint firstItem="6hy-AT-kXc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="19" id="wpw-n6-xHn"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="activityView" destination="USZ-qM-bkx" id="5Lw-ul-j9Z"/>
+                        <outlet property="spinnerBackgroundView" destination="67I-o2-S4c" id="QRk-1E-u1T"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
